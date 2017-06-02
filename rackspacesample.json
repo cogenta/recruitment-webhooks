@@ -1,0 +1,131 @@
+{
+    "event_id": "xxxxxx:yyyyyyyy:chGqfmAaRa:1491593040000:OK",
+    "log_entry_id": "ce15b360-1bc7-11e7-87f9-8a98ce1a88ef",
+    "details": {
+        "target": "",
+        "timestamp": 1491593062806,
+        "metrics": {
+            "active_shards": {
+                "type": "I",
+                "data": 26,
+                "unit": "unknown"
+            },
+            "cluster_name": {
+                "type": "s",
+                "data": "ElasticCluster",
+                "unit": "unknown"
+            },
+            "active_primary_shards": {
+                "type": "I",
+                "data": 13,
+                "unit": "unknown"
+            },
+            "initializing_shards": {
+                "type": "I",
+                "data": 0,
+                "unit": "unknown"
+            },
+            "unassigned_shards": {
+                "type": "I",
+                "data": 0,
+                "unit": "unknown"
+            },
+            "number_of_data_nodes": {
+                "type": "I",
+                "data": 9,
+                "unit": "unknown"
+            },
+            "timed_out": {
+                "type": "s",
+                "data": "False",
+                "unit": "unknown"
+            },
+            "number_of_nodes": {
+                "type": "I",
+                "data": 9,
+                "unit": "unknown"
+            },
+            "relocating_shards": {
+                "type": "I",
+                "data": 2,
+                "unit": "unknown"
+            },
+            "status": {
+                "type": "s",
+                "data": "green",
+                "unit": "unknown"
+            }
+        },
+        "state": "OK",
+        "status": "[ElasticCluster] Cluster state is GREEN",
+        "txn_id": null,
+        "observations": [
+            {
+                "monitoring_zone_id": null,
+                "state": "OK",
+                "status": "[ElasticCluster] Cluster state is GREEN",
+                "timestamp": 1491593062806,
+                "collectorState": "UP"
+            }
+        ]
+    },
+    "entity": {
+        "id": "entityId",
+        "label": "ElasticNode1",
+        "ip_addresses": {
+            "private0_v4": "127.0.0.0",
+            "RC-FW-CLOUD-Proces0_v4": "127.0.0.0"
+        },
+        "metadata": null,
+        "managed": false,
+        "uri": "https://lon.servers.api.rackspacecloud.com/",
+        "agent_id": "agentid",
+        "created_at": 1442393862861,
+        "updated_at": 1443018713519
+    },
+    "check": {
+        "id": "chGqfmAaRa",
+        "label": "Elasticsearch",
+        "type": "agent.plugin",
+        "details": {
+            "file": "elasticsearch.py",
+            "args": [
+                "-H",
+                "--cluster-health"
+            ]
+        },
+        "monitoring_zones_poll": null,
+        "timeout": 30,
+        "period": 60,
+        "target_alias": null,
+        "target_hostname": null,
+        "target_resolver": null,
+        "disabled": false,
+        "metadata": null,
+        "confd_name": null,
+        "confd_hash": null,
+        "check_version": 0,
+        "active_suppressions": null,
+        "scheduled_suppressions": null,
+        "created_at": 1442580389196,
+        "updated_at": 1442580389196
+    },
+    "alarm": {
+        "id": "aluLO3BNFV",
+        "label": "Cluster Health Slack",
+        "check_id": "chGqfmAaRa",
+        "entity_id": "entityId",
+        "criteria": "if (metric['status']  == 'red') {\n  return new AlarmStatus(CRITICAL, '[#{cluster_name}] Cluster state is RED');\n}\n\nif (metric['status']  == 'yellow') {\n  return new AlarmStatus(WARNING, '[#{cluster_name}] Cluster state is YELLOW');\n}\n\nreturn new AlarmStatus(OK, '[#{cluster_name}] Cluster state is GREEN');",
+        "disabled": false,
+        "notification_plan_id": "npGEuXwA4S",
+        "metadata": {},
+        "confd_name": null,
+        "confd_hash": null,
+        "active_suppressions": null,
+        "scheduled_suppressions": null,
+        "created_at": 1491252662707,
+        "updated_at": 1491593026998
+    },
+    "tenant_id": "10007531",
+    "dashboard_link": "https://intelligence.rackspace.com/cloud/entities/entityId"
+}
