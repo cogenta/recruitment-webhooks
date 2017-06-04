@@ -6,7 +6,7 @@ For this exercise you need to build a webhook relay application using ASP.Net. T
 
 ## Objective
 
-Using the WebHooksTransform solution as a starting point, build a web application which can receive an incoming webhook in the Rackspace Monitoring format, extract the necessary information from the payload and trigger a Slack webhook accordingly.
+Using the WebHookRelay solution as a starting point, build a web application which can receive an incoming webhook in the Rackspace Monitoring format, extract the necessary information from the payload and trigger a Slack webhook accordingly.
 
 You're welcome to implement this using an ASP.Net technology of your choice (Web Forms, MVC, Web API, etc.). Pick whichever you think is best.
 
