@@ -44,5 +44,6 @@ Please post a suitable message to the Slack channel, notifying the team of the c
 We'll carry out an automated test on your solution, followed by a manual code review. Please treat this as you would a normal programming task, and adhere to your normal coding standards.
 
 
+Once you've completed the exercise, please submit the solution files as a .zip file, via your HR point of contact or recruitment agent.
 
-`
+Good luck!
