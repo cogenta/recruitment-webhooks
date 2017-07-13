@@ -20,7 +20,7 @@ The payload format it should expect is defined in the [Rackspace Monitoring API 
 
 For testing, you can try POSTing this to your receiver using cUrl or Fiddler, etc.
 
-`curl -X POST -d "@RackspaceSample.json" http://localhost:88/slack-relay`
+`curl -X POST -H "Content-type: application/json" -d "@RackspaceSample.json" http://localhost:88/slack-relay`
 
 In the payload, these fields are relevant
 
