@@ -1,4 +1,4 @@
-# Web Developer Exercise - Webhooks
+# Recruitment Exercise - Webhooks
 
 ## Introduction
 
